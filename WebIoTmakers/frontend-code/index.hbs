@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>smart life</title>
+
+</head>    
+<body>
+    <script>
+        let ws = new Websocket("ws:153.126.132.81:3000");
+        ws.send("hello");
+        ws.addEventListener("message", v => console.log(v));
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/javascript/sw.js').then(function() { 
+                console.log("Service Worker Registered"); });
+        }
+        console.log('stupid!');
+        
+    </script>
+    <div class="main">
+        <div id="logo">
+            <img src="./image/logo.png">
+        </div>
+        <button id="homebutton" onclick="location.href='./home'">
+            <img src="/image/home.png" alt="home">
+        </button>
+        <button id="fieldbutton" onclick="location.href='./field'">
+            <img src="/image/field.png" alt="field">
+        </button>
+        <div class="coment">
+            <p id="text">家と畑、見たい方を選んでね</p>
+            <img id="hukidashi" src="/image/fukidashi_bw10.png" width="320px;" height="120px">
+            <img name="kuma" class="kuma" src="/image/kwaii.png"  width="200px">
+        </div>
+        
+    </div>
+</body>
+</html>

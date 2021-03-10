@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        function cam_field_change() {
+            const field_cam = document.getElementById("field_cam");
+            if(field_cam.style.display=="block") {
+                //noneで非表示
+                field_cam.style.display="none";
+            }else {
+                //blockで表示
+                field_cam.style.display="block";
+            }
+
+        }
+        window.onload= function glasseff() {
+            var temp ={{FarmT}};
+            var Hum = {{FarmH}};
+            var object =document.getElementById("glass");
+            var string =document.getElementById("status");
+            if (temp > 28) {
+                object.src = "./image/湿度いらすと2.png";
+                string.textContent ="熱いよ～～～!!";
+            }else if (temp < 10){
+                object.src = "./image/湿度いらすと3.png";
+                string.textContent ="寒いよ～～～!!";
+            }else {
+                object.src = "./image/湿度いらすと1.png";
+                string.textContent ="快適!!!!!!!!!!";
+            }
+        }
+        window.onload=function IR() {
+            var IR = ture;
+            IR ={{FarmIr}};
+            var object = document.getElementById("");
+        } 
+
+    </script>
+    <title>smart life</title>
+</head>
+<body>
+    <div id="logo" onclick="location.href='/'" style="cursor: pointer">
+        <img src="./image/logo.png">
+    </div>
+    <header>><a href="/">メイン画面へ戻る</a></header>
+    <div id="title">
+        <img src="/image/fieldB.png">
+    </div>
+    <div class="cameramode">
+        <button onclick="cam_field_change()" id="cameramode">
+            <img src="/image/kaden_camera_compact.png" alt="カメラ的な" width="100px">
+        </button>
+    </div>
+    <div id="field_cam">
+        <img src="" alt="カメラ起動時はここに描画">
+    </div>
+    
+    <div id="sensor">
+        <div class="box2">
+            <img src="./image/animal_inoshishi_hatake_arasu.png" alt="ここにいい感じの画像" width="290px">
+            <p>害獣検知</p>
+            <p id="">sensor not active</p>
+            
+        </div>
+        <div class="box2">
+            <img src="image/machine_ondo_shitsudokei.png" alt="ここにもいい感じの画像" width="290px">
+            <p>湿度</p>
+            <p>{{FarmH}}</p>
+        </div>
+        <div class="box2">
+            <img src="./image/ondokei.png" alt="ここにいい感じの画像" width="290px">
+            <p>温度</p>
+            <p>{{FarmT}}度</p>
+        </div>
+        <div class="box2">
+                <img src=""  id="glass" alt="ここにいい感じの画像" width="250px">
+                <p>植物の状態</p>
+                <p id="status">　</p>
+            </div>
+        <div class="end"></div>
+    </div>
+    <footer></footer>
+</body>
+</html>
