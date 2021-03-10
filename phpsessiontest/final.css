@@ -1,0 +1,62 @@
+h1 { 
+    font-size: 30px;
+    color: darkslateblue;
+    text-align:center;
+}
+.task {
+    width: 600px;
+    padding: 10px;
+    background: #84e66c;
+    border: 1px solid #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom:10px; 
+    border-radius: 10px;
+}
+.create {
+    width: 600px;
+    padding: 10px;
+    padding-top: 5px;
+    background: #6024687e;
+    border: 1px solid #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom:10px; 
+    border-radius: 10px;
+}
+.delete {
+    width: 600px;
+    padding: 10px;
+    padding-top: 5px;
+    background: #6024687e;
+    border: 1px solid #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom:10px; 
+    border-radius: 10px;
+}
+.login {
+    width: 600px;
+    padding: 10px;
+    padding-top: 5px;
+    background: #6024687e;
+    border: 1px solid #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom:10px; 
+    border-radius: 10px;
+    text-align: center;
+}
+.text {
+    padding: 10px;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom:10px; 
+    text-align: center;
+}
